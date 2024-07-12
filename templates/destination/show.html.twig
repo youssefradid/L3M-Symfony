@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Destination{% endblock %}
+
+{% block body %}
+    <h1>Destination</h1>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ destination.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ destination.description }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ destination.price|format_currency('EUR') }}</td>
+            </tr>
+            <tr>
+                <th>Duration</th>
+                <td>{{ destination.duration }} Days </td>
+            </tr>
+            <tr>
+                <th>ImageUrl</th>
+                <td><img src="{{ destination.imageUrl }}" alt="{{ destination.name }}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{{ path('app_destination_index') }}">back to list</a>
+
+{% endblock %}
