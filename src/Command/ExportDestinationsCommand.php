@@ -48,7 +48,7 @@ class ExportDestinationsCommand extends Command
         return Command::SUCCESS;
     }
 
-    protected function configure()
+    protected function configure():void
     {
         $this
         ->setDescription('Exports all destinations to a CSV file')
